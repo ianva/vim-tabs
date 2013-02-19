@@ -30,6 +30,10 @@ function! Tabline()
     let s .= ' ' . tab .':'
     let s .= (bufname != '' ? '['. fnamemodify(bufname, ':t') . '] ' : '[No Name] ')
 
+    hi TabLineFill ctermfg=244 ctermbg=236
+    hi Tabline ctermfg=244 ctermbg=236
+    hi TablineSel ctermfg=22 ctermbg=148
+
     if bufmodified
       let s .= '[+] '
     endif
